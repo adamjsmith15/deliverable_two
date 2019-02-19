@@ -1,0 +1,41 @@
+package deliverable_two;
+import java.util.Scanner;
+import java.lang.Math;
+
+public class unicodeCalculator {
+	public static void main(String[] arg) {
+		Scanner scnr = new Scanner(System.in);
+		String string1;
+		String string2;
+		int i;
+		int string1Total = 0;
+		int string2Total = 0;
+		int stringDiff;
+		
+		System.out.println("Please enter your first string: ");
+		//get string from input
+		string1 = scnr.nextLine();
+		System.out.println("Please enter your second string: ");
+		string2 = scnr.nextLine();
+		
+		for (i = 0; i < string1.length(); ++i) {
+			char tempChar = string1.charAt(i);
+			int tempInt = tempChar;
+			System.out.println("\u2022" + tempChar + ": " + tempInt);
+			string1Total = string1Total + tempInt;
+		}
+		
+		for (i = 0; i < string2.length(); ++i) {
+			char tempChar = string2.charAt(i);
+			int tempInt = tempChar;
+			System.out.println(tempChar + ": " + tempInt);
+			string2Total = string2Total + tempInt;
+		}
+		stringDiff = string1Total - string2Total;
+		
+		
+		System.out.println("Difference (as an absolute value): "
+				+ Math.abs(stringDiff));
+	}
+
+}

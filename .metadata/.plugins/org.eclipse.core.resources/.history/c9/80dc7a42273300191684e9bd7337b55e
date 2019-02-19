@@ -1,0 +1,11 @@
+package deliverable_two;
+import java.util.Scanner;
+
+public class unicodeCalculator {
+	public static void main(String[] arg) {
+		Scanner scnr = new Scanner(System.in);
+		String test = Integer.toHexString('g');
+		System.out.print(test);
+	}
+
+}

@@ -1,0 +1,40 @@
+package deliverable_two;
+import java.util.Scanner;
+
+public class unicodeCalculator {
+	public static void main(String[] arg) {
+		Scanner scnr = new Scanner(System.in);
+		String string1;
+		String string2;
+		int i;
+		int string1Total = 0;
+		int string2Total = 0;
+		
+		System.out.println("Please enter your first string: ");
+		//get string from input
+		string1 = scnr.next();
+		System.out.println("Please enter your second string: ");
+		string2 = scnr.next();
+		
+		for (i = 0; i < string1.length(); ++i) {
+			char tempChar = string1.charAt(i);
+			int tempInt = tempChar;
+			string1Total = string1Total + tempInt;
+		}
+		
+		for (i = 0; i < string2.length(); ++i) {
+			char tempChar = string2.charAt(i);
+			int tempInt = tempChar;
+			string2Total = string2Total + tempInt;
+		}
+		System.out.print(string1Total);
+		System.out.print(string2Total);
+		/*
+		 * This is how I can get char and turn it to unicode
+		char t1= 'G';
+		int test = t1;
+		System.out.print(test);
+		*/
+	}
+
+}
